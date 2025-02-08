@@ -83,8 +83,11 @@ def tool_node(state: AgentState):
             raise ValueError(f"Tool {tool_call['name']} not found")
 
         tool = tools_by_name[tool_call["name"]]
-        # Merge tool args with state's include_domains
-        tool_args = {**tool_call["args"], "include_domains": state["include_domains"]}
+        # Safely get the include_domains from state if it exists
+        include_domains = state.get("include_domains")
+        tool_args = {**tool_call["args"]}
+        if include_domains is not None:
+            tool_args["include_domains"] = include_domains
         output = tool.invoke(tool_args)
         responses.append(
             ToolMessage(
