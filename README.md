@@ -11,9 +11,6 @@ add your OpenAI and Exa API keys to the .env file
 pip install -e .
 ```
 
-```bash
-pip install langgraph-cli[inmem]
-```
 
 ```bash
 langgraph dev
