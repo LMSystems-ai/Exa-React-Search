@@ -83,7 +83,9 @@ def tool_node(state: AgentState):
             raise ValueError(f"Tool {tool_call['name']} not found")
 
         tool = tools_by_name[tool_call["name"]]
-        output = tool.invoke(tool_call["args"])
+        # Merge tool args with state's include_domains
+        tool_args = {**tool_call["args"], "include_domains": state["include_domains"]}
+        output = tool.invoke(tool_args)
         responses.append(
             ToolMessage(
                 content=json.dumps(output, indent=2),
