@@ -1,0 +1,59 @@
+[project]
+name = "rag_pro"
+version = "0.0.1"
+description = "Rag pro search graph."
+authors = [
+    { name = "Sean S" }
+]
+
+dependencies = [
+    "exa-py>=0.0.28",
+    "langchain-exa>=0.2.1",
+    "langchain-core>=0.3.33",
+    "langchain-openai>=0.3.3",
+    "langgraph>=0.2.69",
+    "langchain-community>=0.3.16",
+    "python-dotenv",
+]
+
+
+[project.optional-dependencies]
+dev = ["mypy>=1.11.1", "ruff>=0.6.1"]
+
+[build-system]
+requires = ["setuptools>=73.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["rag_pro"]
+
+[tool.setuptools.package-dir]
+"rag_pro" = "src/rag_pro"
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
+
+[tool.ruff]
+target-version = "py39"
+select = [
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "I",    # isort
+    "D",    # pydocstyle
+    "D401", # First line should be in imperative mood
+    "T201",
+    "UP",
+]
+ignore = [
+    "UP006",
+    "UP007",
+    "UP035",
+    "D417",
+    "E501",
+]
+
+[tool.ruff.pydocstyle]
+convention = "google"
+
+[tool.ruff.per-file-ignores]
+"tests/*" = ["D", "UP"]

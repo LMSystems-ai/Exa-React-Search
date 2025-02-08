@@ -1,0 +1,12 @@
+{
+    "dockerfile_lines": [],
+    "graphs": {
+      "rag_pro": "./src/rag_pro/graph.py:graph",
+      "rag_pro_branches": "./src/rag_pro/graph-branches.py:graph"
+    },
+    "python_version": "3.11",
+    "env": "./.env",
+    "dependencies": [
+      "."
+    ]
+  }
