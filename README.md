@@ -5,8 +5,14 @@ What would be really cool is allowing the llm to call the tool node (exa search)
 
 ### Quick Start
 
+add your OpenAI and Exa API keys to the .env file
+
 ```bash
 pip install -e .
+```
+
+```bash
+pip install langgraph-cli[inmem]
 ```
 
 ```bash
