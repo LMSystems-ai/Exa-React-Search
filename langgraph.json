@@ -5,7 +5,7 @@
       "rag_pro_branches": "./src/rag_pro/graph-branches.py:graph"
     },
     "python_version": "3.11",
-    "env": "./.env",
+    "env": ".",
     "dependencies": [
       "."
     ]
