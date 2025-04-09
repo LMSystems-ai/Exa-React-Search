@@ -1,0 +1,13 @@
+---
+services:
+  langgraph-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "2024:2024"
+    env_file:
+      - .env
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    restart: unless-stopped
