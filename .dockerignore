@@ -1,0 +1,37 @@
+# Git files
+.git
+.gitignore
+
+# Python cache and virtual environments
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Build artifacts
+*.egg-info/
+dist/
+build/
+
+# Docker specific files
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Environment variables file (already present, should not be copied)
+.env
+
+# Test / Coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Logs
+*.log
+
+# IDE specific folders
+.vscode/
+.idea/

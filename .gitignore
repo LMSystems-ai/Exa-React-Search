@@ -5,3 +5,5 @@ __pycache__/*
 .ruff_cache/*
 .mypy_cache/*
 .pytest_cache/*
+.venv/
+src/rag_pro/__pycache__/
